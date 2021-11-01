@@ -17,8 +17,9 @@ Il est à noter que seuls le propriétaire du fichier ainsi que le super-utilisa
 #### Afficher les droits d'un fichier
 
 &#x20;Les droits des fichiers d'un répertoire peuvent être affichés par la commande `ls -l`et apparaissent alors comme une liste de 10 symboles. :
+![](../.gitbook/assets/chmod1.png)
 
-![](<../.gitbook/assets/image (2).png>)
+
 
 &#x20;**Le premier symbole **peut être « - », « d », soit « l », entres autres. Il indique la nature du fichier :
 
@@ -32,7 +33,7 @@ Il est à noter que seuls le propriétaire du fichier ainsi que le super-utilisa
 
 Suivent ensuite 3 groupes de 3 symboles chacun, indiquant si le fichier (ou répertoire) est autorisé en lecture, écriture ou exécution.&#x20;
 
-![](<../.gitbook/assets/image (1).png>)
+![](../.gitbook/assets/chmod2.png)
 
 Les 3 groupes correspondent, dans cet ordre, aux droits du propriétaire, du groupe puis du reste des utilisateurs. Dans le paragraphe introductif, vous aurez remarqué des lettres en gras dans les termes anglais. Ce sont ces lettres qui sont utilisées pour symboliser lesdites permissions. Si la permission n'est pas accordée, la lettre en question est remplacé par « - ». Si l'on reprend les lettres données pour lecture/écriture/exécution (**r**ead/**w**rite/e**x**ecute), nous obtenons : **rwx**.
 
@@ -49,7 +50,7 @@ chmod <right> <file>
 ###
 
 | Paramètre | Description |
-| --------- | ----------- |
+|-----------|-------------|
 | -R        | récursif    |
 
 ##

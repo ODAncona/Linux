@@ -11,8 +11,7 @@ Sous Linux, on a depuis longtemps pris l'habitude de procéder en deux étapes :
 1. réunir les fichiers dans un seul gros fichier appelé **archive**. On utilise pour cela le programme `tar` ;
 2. compresser le gros fichier ainsi obtenu à l'aide de `gzip` ou de `bzip2`.
 
-![](<../.gitbook/assets/image (3).png>)
-
+![](../.gitbook/assets/tar.png)
 
 
 ## Syntaxe

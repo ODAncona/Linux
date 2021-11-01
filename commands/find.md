@@ -11,7 +11,7 @@ La commande `find` permet de retrouver des fichiers à partir de certains critè
 ### Opérateurs logiques
 
 | Opérateur | Syntaxe        |
-| --------- | -------------- |
+|-----------|----------------|
 | AND       | \\( P -a Q \\) |
 | NOT       | \\( ! P \\)    |
 | OR        | \\( P -o Q \\) |
@@ -25,7 +25,7 @@ find répertoire critères
 ### Options
 
 | Paramètre | Description                                                    |
-| --------- | -------------------------------------------------------------- |
+|-----------|----------------------------------------------------------------|
 | `-name`   | recherche sur le nom du fichier                                |
 | `-perm`   | recherche sur les droits d’accès du fichier                    |
 | `-user`   | recherche sur le propriétaire du fichier                       |

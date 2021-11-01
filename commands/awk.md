@@ -1,5 +1,6 @@
 ---
 description: pattern scanning and text processing language
+id: 20211101143004
 ---
 
 # awk
