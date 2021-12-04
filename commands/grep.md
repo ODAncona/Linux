@@ -24,7 +24,7 @@ grep -option(s) expression fichier(s)
 | `-i`      | ignorer la casse                                                              |
 | `-R`      | récursif                                                                      |
 | `-o`      | only matching                                                                 |
-| `-E`      | A FAIRE                                                                       |
+| `-E`      | Expressions régulières                                                        |
 
 ## Utilisation
 
@@ -50,6 +50,12 @@ grep -ci "<table" *.html | \
 ```
 
 Les résultats en sortie de la commande `grep` sont séparés par `:`, bien pratique pour traiter rapidement les résultats avec l’utilitaire `awk`.
+
+#### Lister les adresses IP présentes dans le fichier auth.log
+
+```
+grep -E "([0-9]{1,3}[\.]){3}[0-9]{1,3}" auth.log
+```
 
 ### Expressions régulières
 
