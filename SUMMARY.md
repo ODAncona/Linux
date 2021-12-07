@@ -35,6 +35,7 @@
 
 * [Filesystem](system/filesystem.md)
 * [System call](system/system-call.md)
+* [VIM](system/vim.md)
 
 ## Regex
 
