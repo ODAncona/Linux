@@ -81,138 +81,138 @@ description: Cheat Sheet
 
 ### Éditer
 
-* r - remplacer un caractère
-* R - replace more than one character, until ESC is pressed.
-* J - joindre la ligne suivante à la ligne en cours en ajoutant un espace
-* gJ - joindre la ligne suivante à la ligne en cours sans ajouter d'espace
-* gwip - reflow paragraph
-* g\~ - switch case up to motion
-* gu - change to lowercase up to motion
-* gU - change to uppercase up to motion
-* cc - changer (remplacer) une ligne entière
-* C - changer (remplacer) jusqu'à la fin de la ligne
-* c$ - changer (remplacer) jusqu'à la fin d'une ligne
-* ciw - changer (remplacer) un mot entier
-* cw or ce - changer (remplacer) jusqu'à la fin d'un mot
-* s - supprimer un caractère et le remplacer par du texte
-* S - supprimer une ligne et la remplacer par du texte (comme cc)
-* xp - transposer deux lettres (supprimer et coller)
-* u - annuler
-* U - restore (undo) last changed line
-* Ctrl + r - rétablir
-* . - répéter la commande précédente
+* `r` - remplacer un caractère
+* `R` - replace more than one character, until ESC is pressed.
+* `J` - joindre la ligne suivante à la ligne en cours en ajoutant un espace
+* `gJ` - joindre la ligne suivante à la ligne en cours sans ajouter d'espace
+* `gwip` - reflow paragraph
+* `g~` - switch case up to motion
+* `gu` - change to lowercase up to motion
+* `gU` - change to uppercase up to motion
+* `cc` - changer (remplacer) une ligne entière
+* `C` - changer (remplacer) jusqu'à la fin de la ligne
+* `c$` - changer (remplacer) jusqu'à la fin d'une ligne
+* `ciw` - changer (remplacer) un mot entier
+* `cw or ce` - changer (remplacer) jusqu'à la fin d'un mot
+* `s` - supprimer un caractère et le remplacer par du texte
+* `S` - supprimer une ligne et la remplacer par du texte (comme cc)
+* `xp` - transposer deux lettres (supprimer et coller)
+* `u` - annuler
+* `U` - restore (undo) last changed line
+* `Ctrl + r` - rétablir
+* `.` - répéter la commande précédente
 
 ### Marquer du texte (mode visuel)
 
-* v - passer en mode visuel, marquer du texte, exécuter des commandes (comme y)
-* V - passer en mode visuel ligne par ligne
-* o - se déplacer à l'autre extrémité de la zone marquée
-* Ctrl + v - passer en mode visuel par bloc
-* O - se déplacer à l'autre angle du bloc
-* aw - marquer un mot
-* ab - marquer un bloc avec ()
-* aB - marquer un bloc avec {}
-* at - a block with <> tags
-* ib - marquer par bloc le contenu de ()
-* iB - marquer par bloc le contenu de {}
-* it - inner block with <> tags
-* Esc - quitter le mode visuel
+* `v` - passer en mode visuel, marquer du texte, exécuter des commandes (comme y)
+* `V` - passer en mode visuel ligne par ligne
+* `o` - se déplacer à l'autre extrémité de la zone marquée
+* `Ctrl + v` - passer en mode visuel par bloc
+* `O` - se déplacer à l'autre angle du bloc
+* `aw` - marquer un mot
+* `ab` - marquer un bloc avec ()
+* `aB` - marquer un bloc avec {}
+* `at` - a block with <> tags
+* `ib` - marquer par bloc le contenu de ()
+* `iB` - marquer par bloc le contenu de {}
+* `it` - inner block with <> tags
+* `Esc` - quitter le mode visuel
 
 **Tip** Instead of b or B one can also use ( or { respectively.
 
 ### Commandes du mode visuel
 
-* \> - décaler le texte vers la droite
-* < - décaler le texte vers la gauche
-* y - copier le texte marqué
-* d - supprimer le texte marqué
-* \~ - modifier la casse
-* u - change marked text to lowercase
-* U - change marked text to uppercase
+* `>` - décaler le texte vers la droite
+* `<` - décaler le texte vers la gauche
+* `y` - copier le texte marqué
+* `d` - supprimer le texte marqué
+* `~` - modifier la casse
+* `u` - change marked text to lowercase
+* `U` - change marked text to uppercase
 
 ### Registres
 
-* :reg\[isters] - afficher le contenu des registres
-* "xy - copier dans le registre X
-* "xp - coller le contenu du registre X
-* "+y - yank into the system clipboard register
-* "+p - paste from the system clipboard register
+* `:reg[isters]` - afficher le contenu des registres
+* `"xy` - copier dans le registre X
+* `"xp` - coller le contenu du registre X
+* `"+y` - yank into the system clipboard register
+* `"+p` - paste from the system clipboard register
 
 **Tip** Les registres sont stockés dans \~/.viminfo, et seront encore chargé au prochain démarrage de vim.**Tip** Special registers:
 
- 0 - last yank\
-" - unnamed register, last delete or yank\
-% - current file name\
-\# - alternate file name\
-\* - clipboard contents (X11 primary)\
-\+ - clipboard contents (X11 clipboard)\
-/ - last search pattern\
-: - last command-line\
-. - last inserted text\
-\- - last small (less than a line) delete\
-\= - expression register\
-\_ - black hole register\\
+ `0` - last yank\
+`"` - unnamed register, last delete or yank\
+`%` - current file name\
+`#` - alternate file name\
+`*` - clipboard contents (X11 primary)\
+`+` - clipboard contents (X11 clipboard)\
+`/` - last search pattern\
+`:` - last command-line\
+`.` - last inserted text\
+`-` - last small (less than a line) delete\
+`=` - expression register\
+`_` - black hole register\\
 
 ### Marques
 
-* :marks - lister des marques
-* ma - définir la position actuelle pour la marque A
-* \`a - accéder à la position de la marque A
-* y\`a - copier le texte à la position de la marque A
-* \`0 - go to the position where Vim was previously exited
-* \`" - go to the position when last editing this file
-* \`. - go to the position of the last change in this file
-* \`\` - go to the position before the last jump
-* :ju\[mps] - list of jumps
-* Ctrl + i - go to newer position in jump list
-* Ctrl + o - go to older position in jump list
-* :changes - list of changes
-* g, - go to newer position in change list
-* g; - go to older position in change list
-* Ctrl + ] - jump to the tag under cursor
+* `:marks` - lister des marques
+* `ma` - définir la position actuelle pour la marque A
+* `` `a `` - accéder à la position de la marque A
+* ``y`a`` - copier le texte à la position de la marque A
+* `` `0 `` - go to the position where Vim was previously exited
+* `` `" `` - go to the position when last editing this file
+* `` `. `` - go to the position of the last change in this file
+* ` `` ` - go to the position before the last jump
+* `:ju[mps]` - list of jumps
+* `Ctrl + i` - go to newer position in jump list
+* `Ctrl + o` - go to older position in jump list
+* `:changes` - list of changes
+* `g,` - go to newer position in change list
+* `g;` - go to older position in change list
+* `Ctrl + ]` - jump to the tag under cursor
 
 **Tip** To jump to a mark you can either use a backtick (\`) or an apostrophe ('). Using an apostrophe jumps to the beginning (first non-blank) of the line holding the mark.
 
 ### Macros
 
-* qa - enregistre la macro a
-* q - arrêter l'enregistrement de la macro
-* @a - exécuter la macro a
-* @@ - re-exécuter la dernière macro executée
+* `qa` - enregistre la macro a
+* `q` - arrêter l'enregistrement de la macro
+* `@a` - exécuter la macro a
+* `@@` - re-exécuter la dernière macro executée
 
 ### Copier-coller
 
-* yy - copier une ligne
-* 2yy - copier 2 lignes
-* yw - copier un mot
-* yiw - copier le mot sous le curseur
-* yaw - copier le mot sous le curseur avec l'espace après ou avant
-* y$ - copier jusqu'à la fin de la ligne
-* p - coller le presse-papier après le curseur
-* P - coller le presse-papier avant le curseur
-* gp - put (paste) the clipboard after cursor and leave cursor after the new text
-* gP - put (paste) before cursor and leave cursor after the new text
-* dd - supprimer (couper) une ligne
-* 2dd - supprimer (couper) 2 lignes
-* dw - supprimer (couper) un mot
-* diw - supprimer (couper) un mot sous le curseur
-* daw - supprimer (couper) un mot avec l'espace après ou avant
-* D - supprimer (couper) jusqu'à la fin de la ligne
-* d$ - supprimer (couper) jusqu'à la fin de la ligne
-* x - supprimer (couper) un caractère
+* `yy` - copier une ligne
+* `2yy` - copier 2 lignes
+* `yw` - copier un mot
+* `yiw` - copier le mot sous le curseur
+* `yaw` - copier le mot sous le curseur avec l'espace après ou avant
+* `y$` - copier jusqu'à la fin de la ligne
+* `p` - coller le presse-papier après le curseur
+* `P` - coller le presse-papier avant le curseur
+* `gp` - put (paste) the clipboard after cursor and leave cursor after the new text
+* `gP` - put (paste) before cursor and leave cursor after the new text
+* `dd` - supprimer (couper) une ligne
+* `2dd` - supprimer (couper) 2 lignes
+* `dw` - supprimer (couper) un mot
+* `diw` - supprimer (couper) un mot sous le curseur
+* `daw` - supprimer (couper) un mot avec l'espace après ou avant
+* `D` - supprimer (couper) jusqu'à la fin de la ligne
+* `d$` - supprimer (couper) jusqu'à la fin de la ligne
+* `x` - supprimer (couper) un caractère
 
 ### Indent text
 
-* \>> - indent (move right) line one shiftwidth
-* << - de-indent (move left) line one shiftwidth
-* \>% - indent a block with () or {} (cursor on brace)
-* \>ib - indent inner block with ()
-* \>at - indent a block with <> tags
-* 3== - re-indent 3 lines
-* \=% - re-indent a block with () or {} (cursor on brace)
-* \=iB - re-indent inner block with {}
-* gg=G - re-indent entire buffer
-* ]p - paste and adjust indent to current line
+* `>>` - indent (move right) line one shiftwidth
+* `<<` - de-indent (move left) line one shiftwidth
+* `>%` - indent a block with () or {} (cursor on brace)
+* `>ib` - indent inner block with ()
+* `>at` - indent a block with <> tags
+* `3==` - re-indent 3 lines
+* `=%` - re-indent a block with () or {} (cursor on brace)
+* `=iB` - re-indent inner block with {}
+* `gg=G` - re-indent entire buffer
+* `]p` - paste and adjust indent to current line
 
 ### Quitter
 
