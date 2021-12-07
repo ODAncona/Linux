@@ -24,14 +24,14 @@ description: Cheat Sheet
 * `M` - aller au milieu de l'écran
 * `L` - aller en bas de l'écran
 * `w` - aller en avant au début d'un mot
-* W - aller en avant au début d'un mot (les mots peuvent contenir de la ponctuation)
-* e - aller en avant à la fin d'un mot
-* E - aller en avant à la fin d'un mot (les mots peuvent contenir de la ponctuation)
-* b - aller en arrière au début d'un mot
-* B - aller en arrière au début d'un mot (les mots peuvent contenir de la ponctuation)
-* ge - jump backwards to the end of a word
-* gE - jump backwards to the end of a word (words can contain punctuation)
-* % - aller au caractère associé (paires par défaut: '()', '{}', '\[]' - utiliser `:h matchpairs` dans vim pour plus d'informations)
+* `W` - aller en avant au début d'un mot (les mots peuvent contenir de la ponctuation)
+* `e` - aller en avant à la fin d'un mot
+* `E` - aller en avant à la fin d'un mot (les mots peuvent contenir de la ponctuation)
+* `b` - aller en arrière au début d'un mot
+* `B` - aller en arrière au début d'un mot (les mots peuvent contenir de la ponctuation)
+* `ge` - jump backwards to the end of a word
+* `gE` - jump backwards to the end of a word (words can contain punctuation)
+* `%` - aller au caractère associé (paires par défaut: '()', '{}', '\[]' - utiliser `:h matchpairs` dans vim pour plus d'informations)
 * `0` - aller au début de la ligne
 * `^` - aller au premier caractère non-espace de la ligne
 * `$` - aller à la fin de la ligne
@@ -45,39 +45,39 @@ description: Cheat Sheet
 * `tx` - atteindre le caractère précédent la prochaine occurence du caractère x
 * `Fx` - atteindre la précédente occurence du character x
 * `Tx` - atteindre le caractère suivant la précédente occurence du caractère x
-* ; - répéter le dernier f, t, F ou T
-* , - répéter le dernier f, t, F ou T, dans l'autre sens
+* `;` - répéter le dernier f, t, F ou T
+* `,` - répéter le dernier f, t, F ou T, dans l'autre sens
 * `}` - atteindre le prochain paragraphe (ou function/bloc, en mode édition)
 * `{` - atteindre le précédent paragraphe (ou function/bloc, en mode édition)
 * `zz` - centre le curseur sur l'écran
-* Ctrl + e - Descendre l'écran d'une ligne (sans déplacer le curseur)
-* Ctrl + y - Monter l'écran d'une ligne (sans déplacer le curseur)
-* Ctrl + b - Descendre d'une hauteur d'écran
-* Ctrl + f - Monte d'une hauteur d'écran
-* Ctrl + d - Monte d'une demie-hauteur d'écran
-* Ctrl + u - Descendre d'une demie-hauteur d'écran
+* `Ctrl + e` - Descendre l'écran d'une ligne (sans déplacer le curseur)
+* `Ctrl + y` - Monter l'écran d'une ligne (sans déplacer le curseur)
+* `Ctrl + b` - Descendre d'une hauteur d'écran
+* `Ctrl + f` - Monte d'une hauteur d'écran
+* `Ctrl + d` - Monte d'une demie-hauteur d'écran
+* `Ctrl + u`- Descendre d'une demie-hauteur d'écran
 
 **Tip** Préfixez un mouvement avec un nombre pour le répeter. Par exemple, 4j déplace le curseur de 4 lignes vers le bas.
 
 ### Mode insertion - insérer/ajouter du texte
 
-* i - insérer avant le curseur
-* I - insérer au début de la ligne
-* a - insérer (ajouter) après le curseur
-* A - insérer (ajouter) à la fin de la ligne
-* o - ajouter (ouvrir) une nouvelle ligne vers le bas
-* O - ajouter (ouvrir) une nouvelle ligne vers le haut
-* ea - insérer (ajouter) a la fin d'un mot
-* Ctrl + h - delete the character before the cursor during insert mode
-* Ctrl + w - delete word before the cursor during insert mode
-* Ctrl + j - begin new line during insert mode
-* Ctrl + t - indent (move right) line one shiftwidth during insert mode
-* Ctrl + d - de-indent (move left) line one shiftwidth during insert mode
-* Ctrl + n - insert (auto-complete) next match before the cursor during insert mode
-* Ctrl + p - insert (auto-complete) previous match before the cursor during insert mode
-* Ctrl + rx - insert the contents of register x
-* Ctrl + ox - Entrez temporairement en mode normal pour émettre une commande de mode normal x.
-* Esc - quitter le mode insertion
+* `i` - insérer avant le curseur
+* `I` - insérer au début de la ligne
+* `a` - insérer (ajouter) après le curseur
+* `A` - insérer (ajouter) à la fin de la ligne
+* `o` - ajouter (ouvrir) une nouvelle ligne vers le bas
+* `O` - ajouter (ouvrir) une nouvelle ligne vers le haut
+* `ea` - insérer (ajouter) a la fin d'un mot
+* `Ctrl + h` - delete the character before the cursor during insert mode
+* `Ctrl + w` - delete word before the cursor during insert mode
+* `Ctrl + j` - begin new line during insert mode
+* `Ctrl + t` - indent (move right) line one shiftwidth during insert mode
+* `Ctrl + d` - de-indent (move left) line one shiftwidth during insert mode
+* `Ctrl + n` - insert (auto-complete) next match before the cursor during insert mode
+* `Ctrl + p` - insert (auto-complete) previous match before the cursor during insert mode
+* `Ctrl + rx` - insert the contents of register x
+* `Ctrl + ox` - Entrez temporairement en mode normal pour émettre une commande de mode normal x.
+* `Esc` - quitter le mode insertion
 
 ### Éditer
 
