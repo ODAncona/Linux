@@ -31,14 +31,14 @@
 * [tree](commands/objdump.md)
 * [wc](commands/wc.md)
 
-## System
+## Syscall
 
-* [Filesystem](system/filesystem.md)
 * [System call](system/system-call.md)
+
+## Other
+
 * [VIM](system/vim.md)
-
-## Regex
-
+* [Filesystem](system/filesystem.md)
 * [Intro](regex/intro.md)
 
 ## Latex
