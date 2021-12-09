@@ -51,14 +51,12 @@ For log analysis purposes, regex can reduce false positives as it provides a mor
 
 ```bash
 grep -E "192\.168\.0\.\d{1,3}" /var/log/syslog
-Bash
 ```
 
 You can also utilize the powerful inverse search to rule out certain lines:
 
 ```bash
 grep -v -E "192\.168\.0\.\d{1,3}" /var/log/syslog
-Bash
 ```
 
 This command searches for all lines that **do not** contain IP addresses within the `192.168.25.0/24` subnet. You can probably imagine how functionalities like this can be useful: they allow you to rule out safe IP addresses and application names while filtering for certain criteria like timestamps, IP addresses, and hostnames that indicate suspicious behavior.
@@ -67,10 +65,13 @@ Another very useful feature built into grep is "surround search." It allows you 
 
 ```bash
 grep -B 2 -A 2 -E "192\.168\.0\.\d{1,3}" /var/log/syslog
-Bash
 ```
 
 This command will display two lines before and after the line that contains the target IP addresses.
+
+```
+grep -E "([0-9]{1,3}[\.]){3}[0-9]{1,3}" auth.log
+```
 
 #### Awk’s Powerful Parsing
 
@@ -112,14 +113,12 @@ The tail command displays the last few lines of a file. Its default behavior is 
 
 ```bash
 tail /var/log/auth.log
-Bash
 ```
 
 Using tail with the `-f` flag instructs it not to stop at the end of the file, and wait for additional data to be appended to the input. This is useful when you want to monitor a particular log file in real-time.
 
 ```bash
 tail -f /var/log/auth.log
-Bash
 ```
 
 #### Cut to Parse Delimited Files
@@ -128,7 +127,6 @@ cut is a command-line utility that cuts and parses files according to a delimite
 
 ```bash
 who | cut -c 1-16
-Bash
 ```
 
 The above command parses the output of the `who` command to show the names of the users currently logged into the system.
@@ -141,7 +139,6 @@ For example, you can pipe the output of some of the above commands into `wc`. (`
 
 ```bash
 grep -E "192\.168\.0\.3" /var/log/syslog | wc -l
-Bash
 ```
 
 #### Python, Bash, and Other Scripting Languages
@@ -166,7 +163,6 @@ Using grep, you can list all IPs that have failed login attempts and analyze the
 
 ```bash
 grep "Failed password" /var/log/auth.log | awk ‘{print $11}’ >> ips.txt
-Bash
 ```
 
 Is there a pattern? Are the failed login attempts clustering somewhere? You can also classify failed login attempts by applications, ports, and usernames used to gain insight into who your attackers are and where they are located.
