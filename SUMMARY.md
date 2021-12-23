@@ -40,6 +40,7 @@
 * [VIM](system/vim.md)
 * [Filesystem](system/filesystem.md)
 * [Intro](regex/intro.md)
+* [Bash](other/bash.md)
 * [Log Analysis](other/log-analysis.md)
 
 ## Latex
