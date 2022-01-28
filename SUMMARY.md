@@ -42,6 +42,7 @@
 * [Intro](regex/intro.md)
 * [Bash](other/bash.md)
 * [Log Analysis](other/log-analysis.md)
+* [Test Microphone](other/test-microphone.md)
 
 ## Latex
 
