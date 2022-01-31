@@ -16,22 +16,19 @@ Il est à noter que seuls le propriétaire du fichier ainsi que le super-utilisa
 
 #### Afficher les droits d'un fichier
 
-&#x20;Les droits des fichiers d'un répertoire peuvent être affichés par la commande `ls -l`et apparaissent alors comme une liste de 10 symboles. :
-![](../.gitbook/assets/chmod1.png)
+Les droits des fichiers d'un répertoire peuvent être affichés par la commande `ls -l`et apparaissent alors comme une liste de 10 symboles. : ![](../.gitbook/assets/chmod1.png)
 
+\*\*Le premier symbole \*\*peut être « - », « d », soit « l », entres autres. Il indique la nature du fichier :
 
+* **-** : fichier classique
+* **d** : répertoire
+* **l** : lien symbolique
+* **c** : périphérique de type caractère
+* **b** : périphérique de type bloc
+* **p** : pipe (FIFO) "tube" ou "tuyau" en anglais ou pipeline aussi en français
+* **s** : socket
 
-&#x20;**Le premier symbole **peut être « - », « d », soit « l », entres autres. Il indique la nature du fichier :
-
-* &#x20;**-** : fichier classique
-* &#x20;**d** : répertoire
-* &#x20;**l** : lien symbolique
-* &#x20;**c** : périphérique de type caractère
-* &#x20;**b** : périphérique de type bloc
-* &#x20;**p** : pipe (FIFO) "tube" ou "tuyau" en anglais ou pipeline aussi en français
-* &#x20;**s** : socket
-
-Suivent ensuite 3 groupes de 3 symboles chacun, indiquant si le fichier (ou répertoire) est autorisé en lecture, écriture ou exécution.&#x20;
+Suivent ensuite 3 groupes de 3 symboles chacun, indiquant si le fichier (ou répertoire) est autorisé en lecture, écriture ou exécution.
 
 ![](../.gitbook/assets/chmod2.png)
 
@@ -50,21 +47,25 @@ chmod <right> <file>
 ###
 
 | Paramètre | Description |
-|-----------|-------------|
+| --------- | ----------- |
 | -R        | récursif    |
 
 ##
 
 ## Utilisation
 
+#### Générale
+
 ```bash
 chmod u+rwx,g+rx-w,o+r-wx fichier3
 ```
 
-* On modifie les droits de tous les groupes sur le fichier `fichier3`&#x20;
+* On modifie les droits de tous les groupes sur le fichier `fichier3`
 * On ajoute la permission de lecture, d'écriture et d'exécution pour le **propriétaire** ;
-* &#x20;On ajoute la permission de lecture et d'exécution au **groupe propriétaire**, et on retire la permission d'écriture ;
-* &#x20;On ajoute la permission de lecture aux **autres**, et on retire la permission d'écriture et d'exécution.
+* On ajoute la permission de lecture et d'exécution au **groupe propriétaire**, et on retire la permission d'écriture ;
+* On ajoute la permission de lecture aux **autres**, et on retire la permission d'écriture et d'exécution.
+
+#### Changer les droits d'un fichier
 
 ```
 chmod 754 fichier3
@@ -72,3 +73,12 @@ chmod 754 fichier3
 
 même commande que précédemment
 
+#### Changer récursivement les droits d'un dossier
+
+utilisateur: RWX\
+groupe: -WX\
+autre: -WX
+
+```
+chmod -R 755 folder
+```
