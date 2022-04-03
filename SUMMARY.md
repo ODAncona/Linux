@@ -21,6 +21,7 @@
 * [printf](commands/printf.md)
 * [ps](commands/ps.md)
 * [rainbowcrack](commands/rainbowcrack.md)
+* [rsync](commands/rsync.md)
 * [scp](commands/scp.md)
 * [sed](commands/sed.md)
 * [sort](commands/sort.md)
@@ -43,6 +44,7 @@
 * [Bash](other/bash.md)
 * [Log Analysis](other/log-analysis.md)
 * [Test Microphone](other/test-microphone.md)
+* [About RAM](other/about-ram.md)
 
 ## Latex
 
