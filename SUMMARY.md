@@ -45,6 +45,7 @@
 * [Log Analysis](other/log-analysis.md)
 * [Test Microphone](other/test-microphone.md)
 * [About RAM](other/about-ram.md)
+* [FFmpeg](other/ffmpeg.md)
 
 ## Latex
 
